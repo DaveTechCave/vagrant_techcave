@@ -12,7 +12,8 @@ sudo apt-get update > /dev/null
 sudo apt-get install -y apache2 > /dev/null
 
 echo "Installing Web Development Environment..."
-sudo apt-get -y install php5 libapache2-mod-php5 php5-mcrypt php5-curl php5-gd > /dev/null
+#sudo apt-get -y install php5 libapache2-mod-php5 php5-mcrypt php5-curl php5-gd > /dev/null
+sudo apt-get -y install php7 libapache2-mod-php7 php7-mcrypt php7-curl php7-gd > /dev/null
 sudo a2enmod php5 > /dev/null
 sudo a2enmod rewrite > /dev/null
 
