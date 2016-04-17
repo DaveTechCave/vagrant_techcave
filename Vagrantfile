@@ -12,14 +12,14 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu/trusty64"
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
     v.cpus = 2
     v.name = "Tech-Cave-Testing"
   end  
 
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.network :forwarded_port, guest: 80, host: 80
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.synced_folder "./techcave", "/var/www/html",
 	owner: "www-data",
